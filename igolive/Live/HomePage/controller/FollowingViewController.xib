@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="11201" systemVersion="15F34" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11161"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="FollowingViewController">
+            <connections>
+                <outlet property="emptyView" destination="99F-D3-z4x" id="M5z-Hk-56h"/>
+                <outlet property="igoImageView" destination="BZL-2G-AGO" id="k0g-Y3-Ip3"/>
+                <outlet property="seeLiveBtn" destination="1KW-S1-0Ld" id="1UU-Cc-9AU"/>
+                <outlet property="tableView" destination="eq1-Pz-Dru" id="Gq2-BD-XAa"/>
+                <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="i5M-Pr-FkT">
+            <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <view hidden="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="99F-D3-z4x">
+                    <subviews>
+                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="1KW-S1-0Ld">
+                            <constraints>
+                                <constraint firstAttribute="height" constant="50" id="QNd-DT-YLe"/>
+                                <constraint firstAttribute="width" constant="286" id="dmO-bN-Y2t"/>
+                            </constraints>
+                            <state key="normal" title="See who's live now"/>
+                            <connections>
+                                <action selector="goFollowButton:" destination="-1" eventType="touchUpInside" id="hdN-zH-PbM"/>
+                            </connections>
+                        </button>
+                        <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="igo_live_logo.png" translatesAutoresizingMaskIntoConstraints="NO" id="BZL-2G-AGO">
+                            <constraints>
+                                <constraint firstAttribute="width" constant="166" id="6r7-hq-Vsj"/>
+                                <constraint firstAttribute="height" constant="108" id="vsv-tf-U48"/>
+                            </constraints>
+                        </imageView>
+                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="NO ONE YOU ARE FOLLOWING IS LIVE RIGHT NOW." textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="6HC-ig-R6F" userLabel="NO ONE YOU ARE FOLLOWING IS LIVE RIGHT NOW.">
+                            <constraints>
+                                <constraint firstAttribute="width" constant="270" id="K4q-gL-QD1"/>
+                                <constraint firstAttribute="height" constant="41" id="Z3r-2g-bsT"/>
+                            </constraints>
+                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                            <color key="textColor" red="0.49411764705882355" green="0.82745098039215681" blue="0.12941176470588234" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            <nil key="highlightedColor"/>
+                        </label>
+                    </subviews>
+                    <constraints>
+                        <constraint firstItem="1KW-S1-0Ld" firstAttribute="top" secondItem="6HC-ig-R6F" secondAttribute="bottom" constant="21" id="46h-DI-59V"/>
+                        <constraint firstItem="BZL-2G-AGO" firstAttribute="top" secondItem="99F-D3-z4x" secondAttribute="top" constant="78" id="9Kt-oG-a9G"/>
+                        <constraint firstItem="BZL-2G-AGO" firstAttribute="centerX" secondItem="99F-D3-z4x" secondAttribute="centerX" id="D3S-Sb-ug3"/>
+                        <constraint firstItem="6HC-ig-R6F" firstAttribute="top" secondItem="BZL-2G-AGO" secondAttribute="bottom" constant="28" id="eNl-17-J1y"/>
+                        <constraint firstItem="6HC-ig-R6F" firstAttribute="centerX" secondItem="99F-D3-z4x" secondAttribute="centerX" id="fco-y2-6ac"/>
+                        <constraint firstItem="1KW-S1-0Ld" firstAttribute="centerX" secondItem="99F-D3-z4x" secondAttribute="centerX" id="zbq-f1-UFn"/>
+                    </constraints>
+                </view>
+                <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" style="plain" separatorStyle="none" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="eq1-Pz-Dru">
+                    <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    <connections>
+                        <outlet property="dataSource" destination="-1" id="NFC-FL-Cde"/>
+                        <outlet property="delegate" destination="-1" id="EHZ-tV-pRe"/>
+                    </connections>
+                </tableView>
+            </subviews>
+            <color key="tintColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <constraints>
+                <constraint firstAttribute="trailing" secondItem="eq1-Pz-Dru" secondAttribute="trailing" id="2wg-La-cYl"/>
+                <constraint firstAttribute="trailing" secondItem="99F-D3-z4x" secondAttribute="trailing" id="41I-cR-vFe"/>
+                <constraint firstItem="99F-D3-z4x" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" id="Nmk-si-b9o"/>
+                <constraint firstItem="eq1-Pz-Dru" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" id="Sg3-3B-3Qr"/>
+                <constraint firstItem="eq1-Pz-Dru" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" id="U30-nB-tGp"/>
+                <constraint firstAttribute="bottom" secondItem="eq1-Pz-Dru" secondAttribute="bottom" id="U6m-sp-cBv"/>
+                <constraint firstAttribute="bottom" secondItem="99F-D3-z4x" secondAttribute="bottom" id="aeU-KW-dlh"/>
+                <constraint firstItem="99F-D3-z4x" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" id="fah-6Y-9Oj"/>
+            </constraints>
+        </view>
+    </objects>
+    <resources>
+        <image name="igo_live_logo.png" width="133" height="52"/>
+    </resources>
+</document>

@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="10117" systemVersion="15G31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="CoinsCell" id="gTV-IL-0wX" customClass="CoinsCell">
+            <rect key="frame" x="0.0" y="0.0" width="171" height="143"/>
+            <autoresizingMask key="autoresizingMask"/>
+            <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
+                <rect key="frame" x="0.0" y="0.0" width="171" height="143"/>
+                <subviews>
+                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="coin_rect" translatesAutoresizingMaskIntoConstraints="NO" id="JYg-u8-7ZT">
+                        <rect key="frame" x="0.0" y="0.0" width="171" height="143"/>
+                    </imageView>
+                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="coin_big" translatesAutoresizingMaskIntoConstraints="NO" id="bQu-ds-NwI">
+                        <rect key="frame" x="73" y="19" width="25" height="25"/>
+                        <constraints>
+                            <constraint firstAttribute="height" constant="25" id="kBc-eZ-CP8"/>
+                            <constraint firstAttribute="width" constant="25" id="vw7-pK-vck"/>
+                        </constraints>
+                    </imageView>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="100" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="h6N-6w-CwG">
+                        <rect key="frame" x="0.0" y="52" width="171" height="24"/>
+                        <constraints>
+                            <constraint firstAttribute="height" constant="24" id="4OV-48-m1s"/>
+                        </constraints>
+                        <fontDescription key="fontDescription" type="boldSystem" pointSize="22"/>
+                        <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="+50 BONUS" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="mxI-A2-oIh">
+                        <rect key="frame" x="0.0" y="71" width="171" height="21"/>
+                        <constraints>
+                            <constraint firstAttribute="height" constant="21" id="uG3-Hd-fzy"/>
+                        </constraints>
+                        <fontDescription key="fontDescription" type="boldSystem" pointSize="11"/>
+                        <color key="textColor" red="0.49411764705882355" green="0.82745098039215681" blue="0.12941176470588234" alpha="1" colorSpace="calibratedRGB"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <button opaque="NO" userInteractionEnabled="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="AL7-zP-G4B">
+                        <rect key="frame" x="52" y="102" width="68" height="29"/>
+                        <constraints>
+                            <constraint firstAttribute="height" constant="29" id="PDK-kd-cUY"/>
+                            <constraint firstAttribute="width" constant="68" id="jVz-kW-PMr"/>
+                        </constraints>
+                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                        <state key="normal" title="$0.99" backgroundImage="nextButton"/>
+                    </button>
+                </subviews>
+                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+            </view>
+            <constraints>
+                <constraint firstItem="bQu-ds-NwI" firstAttribute="centerY" secondItem="gTV-IL-0wX" secondAttribute="centerY" constant="-40" id="1Pi-mw-tzx"/>
+                <constraint firstItem="mxI-A2-oIh" firstAttribute="centerX" secondItem="gTV-IL-0wX" secondAttribute="centerX" id="3Jq-wf-oly"/>
+                <constraint firstItem="mxI-A2-oIh" firstAttribute="leading" secondItem="gTV-IL-0wX" secondAttribute="leading" id="3Tl-zH-fS4"/>
+                <constraint firstAttribute="trailing" secondItem="mxI-A2-oIh" secondAttribute="trailing" id="5pu-rq-Dqe"/>
+                <constraint firstItem="mxI-A2-oIh" firstAttribute="top" secondItem="bQu-ds-NwI" secondAttribute="bottom" constant="27" id="6At-ZP-aE7"/>
+                <constraint firstItem="JYg-u8-7ZT" firstAttribute="top" secondItem="gTV-IL-0wX" secondAttribute="top" id="8ou-7N-VlA"/>
+                <constraint firstItem="AL7-zP-G4B" firstAttribute="top" secondItem="mxI-A2-oIh" secondAttribute="bottom" constant="10" id="9af-PB-BXg"/>
+                <constraint firstAttribute="bottom" secondItem="JYg-u8-7ZT" secondAttribute="bottom" id="9bW-mo-KpB"/>
+                <constraint firstItem="h6N-6w-CwG" firstAttribute="top" secondItem="bQu-ds-NwI" secondAttribute="bottom" constant="8" id="AnM-bq-Gu9"/>
+                <constraint firstAttribute="trailing" secondItem="JYg-u8-7ZT" secondAttribute="trailing" id="Qph-QB-N6a"/>
+                <constraint firstAttribute="trailing" secondItem="h6N-6w-CwG" secondAttribute="trailing" id="eJk-iu-gOt"/>
+                <constraint firstItem="h6N-6w-CwG" firstAttribute="centerX" secondItem="gTV-IL-0wX" secondAttribute="centerX" id="g5u-cH-bMe"/>
+                <constraint firstItem="AL7-zP-G4B" firstAttribute="centerX" secondItem="gTV-IL-0wX" secondAttribute="centerX" id="gdA-fB-uQt"/>
+                <constraint firstItem="bQu-ds-NwI" firstAttribute="centerX" secondItem="gTV-IL-0wX" secondAttribute="centerX" id="ihJ-vs-IYf"/>
+                <constraint firstItem="h6N-6w-CwG" firstAttribute="leading" secondItem="gTV-IL-0wX" secondAttribute="leading" id="nK9-Pi-CTz"/>
+                <constraint firstItem="JYg-u8-7ZT" firstAttribute="leading" secondItem="gTV-IL-0wX" secondAttribute="leading" id="rFH-fS-Wku"/>
+            </constraints>
+            <connections>
+                <outlet property="bonusLabel" destination="mxI-A2-oIh" id="v1S-Kw-7C1"/>
+                <outlet property="coinsLabel" destination="h6N-6w-CwG" id="W3X-8r-2o7"/>
+                <outlet property="usdButton" destination="AL7-zP-G4B" id="4ut-sW-7fP"/>
+            </connections>
+        </collectionViewCell>
+    </objects>
+    <resources>
+        <image name="coin_big" width="30" height="30"/>
+        <image name="coin_rect" width="85" height="71"/>
+        <image name="nextButton" width="45" height="19"/>
+    </resources>
+</document>

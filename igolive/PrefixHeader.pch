@@ -1,0 +1,164 @@
+
+#ifdef __OBJC__
+    #import <UIKit/UIKit.h>
+    #import <Foundation/Foundation.h>
+    #import "AppDelegate.h"
+    #import "ModelHeader.h"
+    #import "MJRefresh.h"
+    #import "Common.h"
+    #import "HttpService.h"
+    #import "HttpController.h"
+    #import "MBProgressHUD.h"
+    #import "MBProgressHUD+MJ.h"
+    #import "XHFriendlyLoadingView.h"
+    #import <SDWebImage/UIImageView+WebCache.h>
+    #import <UIButton+WebCache.h>
+    #import "Config.h"
+    #import "ActionSheetPicker.h"
+    #import "ViewModifierHelpers.h"
+#endif
+#ifndef PrefixHeader_pch
+
+#define PrefixHeader_pch
+
+#import "igolive-Swift.h"
+#import "xlogger.h"
+#import "HelperMacroDefines.h"
+#import "FilePathDefines.h"
+#import "NetworkDefines.h"
+#import "ObjectTypeValidator.h"
+#import "StringConstantDefines.h"
+#import "ColorDefines.h"
+#import "IGOHelpers.h"
+#import "MiscUtilities.h"
+#import "AlertViewHelpers.h"
+
+
+/* #################### xlogger Settings ###################### */
+#define log_http_req_params 1
+#define log_http_resp_body 1
+#define log_touch_drag_gift 0
+#define log_chat_sock_node_data 0
+
+
+/* #################### Misc UI Settings ###################### */
+#define show_stream_load_view 1
+#define use_new_hearts 1
+#define validate_app_version 1
+
+#define channel_list_refresh_sec 60 * 3
+#define use_chan_list_grad_D2U 0 // fade bottom to top (black to color)
+#define use_chan_list_grad_R2L 0 // fade right to left (color to black)
+
+/* #################### Stream Settings ###################### */
+#define fps_livestream_KSYGPUCamera 20
+#define buffer_time_max 3
+#define bitrate_max 710
+#define bitrate_min 690
+#define heartbeat_timer_sec 3
+#define loadstate_delay_sec 2
+
+
+/* #################### Client Run Settings ###################### */
+#pragma mark - Client Run Settings
+#define git_build_branch @"h"
+
+// run/build settings (** only ONE can/must be 0 **)
+#define run_release_mode 0
+#define run_stage_mode 0    // note_jason_09.30.16: not stable yet, do not use
+#define run_sandbox_mode 1
+#define enable_ui_debug_comps 1
+
+#if enable_ui_debug_comps   /**** UI DEBUG COMPONENTS ON ****/
+#define show_build_num 1        // top right of PersonalCenterController
+#define show_chan_stream_cnt 1  // top right of each channel table view cell
+#endif                      /**** _DEBUG UI COMPONENTS_ ****/
+
+
+/* #################### Server Settings ###################### */
+#define playRtmpUrl @"rtmp://pull.igo.live"
+#define pushRtmpUrl @"rtmp://push.igo.live"
+
+#if run_release_mode    /************************ RELEASE MODE ON ************/
+#define purl @"http://release.igo.live"
+//#define nodejs @"http://release.igo.live:20064"
+#define nodejs @"http://chat.igo.live:20064"
+#define SERVER_URL @"http://release.igo.live/?service="
+#endif
+
+#if run_stage_mode      /************************ STAGE MODE ON ************/
+#define purl @"http://stage.igo.live"
+#define nodejs @"http://stage.igo.live:20064"
+#define SERVER_URL @"http://stage.igo.live/?service="
+#endif
+
+#if run_sandbox_mode      /************************ SANDBOX MODE ON ************/
+#define purl @"http://sandbox.igo.live"
+#define nodejs @"http://sandbox.igo.live:20064"
+#define SERVER_URL @"http://sandbox.igo.live/?service="
+#endif
+
+/* ############################################################### */
+
+
+
+#define  tabBarHeight 100
+
+#define hanshuiYingpiao @"star"
+
+#define  _window_width  [UIScreen mainScreen].bounds.size.width
+
+#define _window_height [UIScreen mainScreen].bounds.size.height
+
+#define backColor [UIColor colorWithRed:238/255.0 green:99/255.0 blue:30/255.0 alpha:1]
+
+//#define tarBarBg [UIColor colorWithRed:255/255.0 green:84/255.0 blue:0/255.0 alpha:1];//tabBar 背景色
+#define tarBarBg     [UIColor clearColor];
+//tabBar 背景色
+
+#define tarTextColor backColor
+
+#define FNOT [UIFont systemFontOfSize:14];
+
+#define leftW 39  //直播间左上角头像
+#define userHeaderImage 35 //用户头像大小
+#define leftWplus 39
+
+
+
+
+#define IS_IPAD (UI_USER_INTERFACE_IDIOM() == UIUserInterfaceIdiomPad)
+#define IS_IPHONE (UI_USER_INTERFACE_IDIOM() == UIUserInterfaceIdiomPhone)
+#define IS_RETINA ([[UIScreen mainScreen] scale] >= 2.0)
+
+#define SCREEN_WIDTH ([[UIScreen mainScreen] bounds].size.width)
+#define SCREEN_HEIGHT ([[UIScreen mainScreen] bounds].size.height)
+#define SCREEN_MAX_LENGTH (MAX(SCREEN_WIDTH, SCREEN_HEIGHT))
+#define SCREEN_MIN_LENGTH (MIN(SCREEN_WIDTH, SCREEN_HEIGHT))
+
+#define IS_IPHONE_4_OR_LESS (IS_IPHONE && SCREEN_MAX_LENGTH < 568.0)
+#define IS_IPHONE_5 (IS_IPHONE && SCREEN_MAX_LENGTH == 568.0)
+#define IS_IPHONE_6 (IS_IPHONE && SCREEN_MAX_LENGTH == 667.0)
+#define IS_IPHONE_6P (IS_IPHONE && SCREEN_MAX_LENGTH == 736.0)
+
+#define moviePlayerFont ([UIScreen mainScreen].scale == 3)?[UIFont systemFontOfSize:14]:[UIFont systemFontOfSize:14]
+
+#define movirPlayerZhiBoLivi  [UIFont systemFontOfSize:10]
+
+
+#define     navigationFontColor [UIColor whiteColor]
+#define     navigationBGColor   [UIColor colorWithRed:80/255.0 green:200/255.0 blue:90/255.0 alpha:1.000];
+#define     wl_lightGrayColor   [UIColor lightGrayColor];
+#define     wl_blackColor       [UIColor blackColor]
+#define     wl_whiteColor       [UIColor whiteColor]
+#define     wl_skinColor                 [UIColor colorWithRed:255/255.0 green:250/255.0 blue:240/255.0 alpha:1]
+#define     wl_brownColor       [UIColor colorWithRed:128/255.0 green:128/255.0 blue:105/255.0 alpha:1]
+#define     wl_highlighted         [UIColor whiteColor]
+//首页高亮
+#endif /* PrefixHeader_pch */
+
+#define appDelegate ((AppDelegate *)([[UIApplication sharedApplication] delegate]))
+
+#define iPhone5 ([UIScreen instancesRespondToSelector:@selector(currentMode)] ? CGSizeEqualToSize(CGSizeMake(640, 1136), [[UIScreen mainScreen] currentMode].size) : 0)
+
+#define COLOR(R,G,B,A) [UIColor colorWithRed:R/255.0 green:G/255.0 blue:B/255.0 alpha:A]

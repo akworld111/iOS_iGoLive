@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="10117" systemVersion="15G31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="EmergingCell" id="gTV-IL-0wX" customClass="EmergingCell">
+            <rect key="frame" x="0.0" y="0.0" width="106" height="106"/>
+            <autoresizingMask key="autoresizingMask"/>
+            <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
+                <rect key="frame" x="0.0" y="0.0" width="106" height="106"/>
+                <subviews>
+                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="gEC-8b-AMk">
+                        <rect key="frame" x="0.0" y="0.0" width="106" height="106"/>
+                    </imageView>
+                    <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="y11-kg-2dz">
+                        <rect key="frame" x="10" y="10" width="26" height="13"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="gold_ellipse" translatesAutoresizingMaskIntoConstraints="NO" id="Wtg-cJ-B2F">
+                                <rect key="frame" x="0.0" y="0.0" width="26" height="13"/>
+                            </imageView>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="male_gender" translatesAutoresizingMaskIntoConstraints="NO" id="HcE-Ef-KO3">
+                                <rect key="frame" x="4" y="3" width="7" height="7"/>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="12" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="2Hw-KQ-6lh">
+                                <rect key="frame" x="12" y="0.0" width="10" height="13"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="8"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                    </view>
+                </subviews>
+                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+            </view>
+            <constraints>
+                <constraint firstAttribute="bottom" secondItem="gEC-8b-AMk" secondAttribute="bottom" id="BrR-8n-Mfv"/>
+                <constraint firstAttribute="trailing" secondItem="gEC-8b-AMk" secondAttribute="trailing" id="P4J-4g-Uvv"/>
+                <constraint firstItem="gEC-8b-AMk" firstAttribute="leading" secondItem="gTV-IL-0wX" secondAttribute="leading" id="TTy-oS-ILY"/>
+                <constraint firstItem="gEC-8b-AMk" firstAttribute="top" secondItem="gTV-IL-0wX" secondAttribute="top" id="rVi-X7-8kf"/>
+            </constraints>
+            <connections>
+                <outlet property="genderImgView" destination="HcE-Ef-KO3" id="iOU-KQ-VkC"/>
+                <outlet property="headImgView" destination="gEC-8b-AMk" id="OSV-sy-nOl"/>
+                <outlet property="levelColorImgView" destination="Wtg-cJ-B2F" id="Gis-zX-SUs"/>
+                <outlet property="levelLabel" destination="2Hw-KQ-6lh" id="0Us-4X-NL5"/>
+            </connections>
+            <point key="canvasLocation" x="227.5" y="209.5"/>
+        </collectionViewCell>
+    </objects>
+    <resources>
+        <image name="gold_ellipse" width="13" height="6"/>
+        <image name="male_gender" width="7" height="7"/>
+    </resources>
+</document>

@@ -1,0 +1,107 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="10117" systemVersion="15G31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="CoinsViewController">
+            <connections>
+                <outlet property="coinsLabel" destination="BdL-qY-udN" id="w5z-Fk-b6G"/>
+                <outlet property="collectionView" destination="Ibg-UC-zTz" id="7w1-oT-dbS"/>
+                <outlet property="headerView" destination="zum-SP-5mk" id="FhS-xN-yUs"/>
+                <outlet property="view" destination="JGA-6N-Aha" id="ft0-mL-QQi"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="JGA-6N-Aha">
+            <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" showsVerticalScrollIndicator="NO" dataMode="none" translatesAutoresizingMaskIntoConstraints="NO" id="Ibg-UC-zTz">
+                    <rect key="frame" x="0.0" y="193" width="414" height="543"/>
+                    <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="10" id="9vv-mh-5j4">
+                        <size key="itemSize" width="50" height="50"/>
+                        <size key="headerReferenceSize" width="0.0" height="0.0"/>
+                        <size key="footerReferenceSize" width="0.0" height="0.0"/>
+                        <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
+                    </collectionViewFlowLayout>
+                    <connections>
+                        <outlet property="dataSource" destination="-1" id="s5L-Z2-IXC"/>
+                        <outlet property="delegate" destination="-1" id="Aiy-4j-gRD"/>
+                    </connections>
+                </collectionView>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="zum-SP-5mk">
+                    <rect key="frame" x="0.0" y="0.0" width="414" height="193"/>
+                    <subviews>
+                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="9iG-IW-df1">
+                            <rect key="frame" x="0.0" y="0.0" width="49" height="70"/>
+                            <constraints>
+                                <constraint firstAttribute="width" constant="49" id="D0u-Vx-RNz"/>
+                                <constraint firstAttribute="height" constant="70" id="WOJ-zL-KgU"/>
+                            </constraints>
+                            <state key="normal" image="back"/>
+                            <connections>
+                                <action selector="backButton:" destination="-2" eventType="touchUpInside" id="rYr-U3-4Em"/>
+                            </connections>
+                        </button>
+                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="8a9-yt-I2c">
+                            <rect key="frame" x="0.0" y="82" width="414" height="30"/>
+                            <subviews>
+                                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="coin_big" translatesAutoresizingMaskIntoConstraints="NO" id="Jbu-Jv-eui">
+                                    <rect key="frame" x="182" y="0.0" width="30" height="30"/>
+                                    <constraints>
+                                        <constraint firstAttribute="width" constant="30" id="7m5-4o-MMY"/>
+                                        <constraint firstAttribute="height" constant="30" id="lJN-tX-GHY"/>
+                                    </constraints>
+                                </imageView>
+                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="0" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="BdL-qY-udN">
+                                    <rect key="frame" x="222" y="0.0" width="20" height="30"/>
+                                    <constraints>
+                                        <constraint firstAttribute="height" constant="30" id="miz-xP-omt"/>
+                                    </constraints>
+                                    <fontDescription key="fontDescription" type="boldSystem" pointSize="30"/>
+                                    <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                    <nil key="highlightedColor"/>
+                                </label>
+                            </subviews>
+                            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                            <constraints>
+                                <constraint firstItem="BdL-qY-udN" firstAttribute="centerX" secondItem="8a9-yt-I2c" secondAttribute="centerX" constant="25" id="3y8-n3-8I3"/>
+                                <constraint firstAttribute="height" constant="30" id="5Ad-Sr-vrk"/>
+                                <constraint firstItem="BdL-qY-udN" firstAttribute="leading" secondItem="Jbu-Jv-eui" secondAttribute="trailing" constant="10" id="XNm-0N-bpb"/>
+                                <constraint firstItem="BdL-qY-udN" firstAttribute="top" secondItem="8a9-yt-I2c" secondAttribute="top" id="uX0-9C-YBa"/>
+                                <constraint firstItem="Jbu-Jv-eui" firstAttribute="top" secondItem="8a9-yt-I2c" secondAttribute="top" id="yWb-7Q-bHe"/>
+                            </constraints>
+                        </view>
+                    </subviews>
+                    <color key="backgroundColor" red="0.10196078431372549" green="0.023529411764705882" blue="0.10196078431372549" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="193" id="4Uw-LN-iMa"/>
+                        <constraint firstAttribute="trailing" secondItem="8a9-yt-I2c" secondAttribute="trailing" id="8qd-Xz-AAE"/>
+                        <constraint firstItem="9iG-IW-df1" firstAttribute="leading" secondItem="zum-SP-5mk" secondAttribute="leading" id="Uld-QW-WkY"/>
+                        <constraint firstItem="8a9-yt-I2c" firstAttribute="leading" secondItem="zum-SP-5mk" secondAttribute="leading" id="Vo9-e6-RNz"/>
+                        <constraint firstItem="9iG-IW-df1" firstAttribute="top" secondItem="zum-SP-5mk" secondAttribute="top" id="pXc-Nv-j2t"/>
+                        <constraint firstItem="8a9-yt-I2c" firstAttribute="centerY" secondItem="zum-SP-5mk" secondAttribute="centerY" id="tgD-56-WW4"/>
+                    </constraints>
+                </view>
+            </subviews>
+            <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+            <constraints>
+                <constraint firstItem="zum-SP-5mk" firstAttribute="leading" secondItem="JGA-6N-Aha" secondAttribute="leading" id="2QJ-oH-MvR"/>
+                <constraint firstAttribute="trailing" secondItem="Ibg-UC-zTz" secondAttribute="trailing" id="39G-kt-8BV"/>
+                <constraint firstAttribute="trailing" secondItem="zum-SP-5mk" secondAttribute="trailing" id="5en-Yv-47e"/>
+                <constraint firstAttribute="bottom" secondItem="Ibg-UC-zTz" secondAttribute="bottom" id="App-bq-Hga"/>
+                <constraint firstItem="Ibg-UC-zTz" firstAttribute="leading" secondItem="JGA-6N-Aha" secondAttribute="leading" id="P8m-VB-whb"/>
+                <constraint firstItem="zum-SP-5mk" firstAttribute="top" secondItem="JGA-6N-Aha" secondAttribute="top" id="Pml-Bo-t5j"/>
+                <constraint firstItem="Ibg-UC-zTz" firstAttribute="top" secondItem="zum-SP-5mk" secondAttribute="bottom" id="wJw-S0-yWe"/>
+            </constraints>
+            <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina55"/>
+            <point key="canvasLocation" x="227" y="209"/>
+        </view>
+    </objects>
+    <resources>
+        <image name="back" width="13" height="20"/>
+        <image name="coin_big" width="30" height="30"/>
+    </resources>
+</document>

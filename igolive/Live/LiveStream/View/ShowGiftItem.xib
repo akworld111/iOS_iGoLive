@@ -1,0 +1,99 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="11201" systemVersion="15G1004" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11161"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" restorationIdentifier="ShowGiftItem" id="iN0-l3-epB" customClass="ShowGiftItem">
+            <rect key="frame" x="0.0" y="0.0" width="200" height="112"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="uw9-BV-lae">
+                    <subviews>
+                        <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="gift_background" translatesAutoresizingMaskIntoConstraints="NO" id="VmS-VO-Gjl"/>
+                        <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="HeadDefault" translatesAutoresizingMaskIntoConstraints="NO" id="7F7-du-mQc">
+                            <constraints>
+                                <constraint firstAttribute="width" constant="40" id="FiY-5A-xLC"/>
+                                <constraint firstAttribute="height" constant="40" id="HTA-sf-p22"/>
+                            </constraints>
+                            <userDefinedRuntimeAttributes>
+                                <userDefinedRuntimeAttribute type="string" keyPath="layer.cornerRadius" value="20"/>
+                                <userDefinedRuntimeAttribute type="boolean" keyPath="layer.masksToBounds" value="YES"/>
+                            </userDefinedRuntimeAttributes>
+                        </imageView>
+                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="4mi-It-t30">
+                            <frame key="frameInset" minX="54" minY="5" width="91" height="20"/>
+                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <fontDescription key="fontDescription" type="system" pointSize="16"/>
+                            <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            <nil key="highlightedColor"/>
+                        </label>
+                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="qyI-OU-Hte">
+                            <frame key="frameInset" minX="54" minY="31" width="91" height="14"/>
+                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <fontDescription key="fontDescription" type="system" pointSize="11"/>
+                            <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            <nil key="highlightedColor"/>
+                        </label>
+                    </subviews>
+                    <constraints>
+                        <constraint firstItem="7F7-du-mQc" firstAttribute="centerY" secondItem="uw9-BV-lae" secondAttribute="centerY" id="F1b-jz-9sn"/>
+                        <constraint firstAttribute="bottom" secondItem="VmS-VO-Gjl" secondAttribute="bottom" id="Fnn-DY-hIg"/>
+                        <constraint firstAttribute="trailing" secondItem="VmS-VO-Gjl" secondAttribute="trailing" id="Gm4-Eb-yoc"/>
+                        <constraint firstItem="VmS-VO-Gjl" firstAttribute="top" secondItem="uw9-BV-lae" secondAttribute="top" id="KZR-cS-NCa"/>
+                        <constraint firstItem="VmS-VO-Gjl" firstAttribute="leading" secondItem="uw9-BV-lae" secondAttribute="leading" id="Nxt-qz-CDa"/>
+                        <constraint firstItem="7F7-du-mQc" firstAttribute="leading" secondItem="uw9-BV-lae" secondAttribute="leading" constant="2" id="Ort-WZ-p6R"/>
+                        <constraint firstAttribute="height" constant="50" id="p5b-LG-2vR"/>
+                    </constraints>
+                </view>
+                <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="gifts_award" translatesAutoresizingMaskIntoConstraints="NO" id="cPm-uH-SHj">
+                    <constraints>
+                        <constraint firstAttribute="width" constant="13" id="GL4-pb-6Ia"/>
+                        <constraint firstAttribute="height" constant="74" id="cww-5k-BkJ"/>
+                        <constraint firstAttribute="width" constant="74" id="upQ-wE-q6m"/>
+                        <constraint firstAttribute="height" constant="33" id="vzG-XD-x1v"/>
+                    </constraints>
+                    <variation key="default">
+                        <mask key="constraints">
+                            <exclude reference="GL4-pb-6Ia"/>
+                            <exclude reference="vzG-XD-x1v"/>
+                        </mask>
+                    </variation>
+                </imageView>
+            </subviews>
+            <constraints>
+                <constraint firstItem="cPm-uH-SHj" firstAttribute="centerY" secondItem="iN0-l3-epB" secondAttribute="centerY" id="6sY-oc-UWa"/>
+                <constraint firstAttribute="trailing" secondItem="uw9-BV-lae" secondAttribute="trailing" id="ehj-9W-wdo"/>
+                <constraint firstItem="uw9-BV-lae" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" id="h5N-CH-abk"/>
+                <constraint firstAttribute="trailing" secondItem="cPm-uH-SHj" secondAttribute="trailing" constant="200" id="jWv-mg-rMv"/>
+                <constraint firstItem="uw9-BV-lae" firstAttribute="centerY" secondItem="iN0-l3-epB" secondAttribute="centerY" id="nJr-eh-lZ3"/>
+            </constraints>
+            <nil key="simulatedStatusBarMetrics"/>
+            <nil key="simulatedTopBarMetrics"/>
+            <nil key="simulatedBottomBarMetrics"/>
+            <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+            <userDefinedRuntimeAttributes>
+                <userDefinedRuntimeAttribute type="string" keyPath="layer.cornerRadius" value="22"/>
+                <userDefinedRuntimeAttribute type="boolean" keyPath="layer.masksToBounds" value="YES"/>
+            </userDefinedRuntimeAttributes>
+            <connections>
+                <outlet property="depictLab" destination="qyI-OU-Hte" id="pWo-dz-6h2"/>
+                <outlet property="giftImage" destination="cPm-uH-SHj" id="D2s-9g-n5S"/>
+                <outlet property="giftImageTrailing" destination="jWv-mg-rMv" id="1Dp-FJ-LtL"/>
+                <outlet property="headImage" destination="7F7-du-mQc" id="g8D-Jn-1Ow"/>
+                <outlet property="nameLab" destination="4mi-It-t30" id="F8P-VM-flx"/>
+                <outlet property="vContainer" destination="uw9-BV-lae" id="2ES-qN-13u"/>
+            </connections>
+            <point key="canvasLocation" x="-27" y="46"/>
+        </view>
+    </objects>
+    <resources>
+        <image name="HeadDefault" width="140" height="140"/>
+        <image name="gift_background" width="147" height="36"/>
+        <image name="gifts_award" width="13" height="33"/>
+    </resources>
+</document>

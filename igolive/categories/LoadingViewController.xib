@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="11201" systemVersion="15G31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11161"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="LoadingViewController">
+            <connections>
+                <outlet property="aiLoading" destination="peL-aY-lNZ" id="OBc-Bs-XLz"/>
+                <outlet property="btnCloseLoadingView" destination="02H-GB-l7x" id="dpJ-f3-acA"/>
+                <outlet property="ivAnimation" destination="ird-cV-5hI" id="pfS-WM-blc"/>
+                <outlet property="ivLoadingImg" destination="XpL-0q-sGB" id="3nL-vI-ALP"/>
+                <outlet property="vLoadingImgOverlay" destination="DcB-EO-T6N" id="vk0-re-f2d"/>
+                <outlet property="vLoadingShadow" destination="yKZ-Px-8WM" id="xSo-Th-oRY"/>
+                <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="i5M-Pr-FkT">
+            <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <view alpha="0.49999999999999961" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="yKZ-Px-8WM">
+                    <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                </view>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="DcB-EO-T6N">
+                    <subviews>
+                        <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Loading_Screen.png" translatesAutoresizingMaskIntoConstraints="NO" id="XpL-0q-sGB"/>
+                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="02H-GB-l7x">
+                            <constraints>
+                                <constraint firstAttribute="height" constant="50" id="l5i-sL-hiY"/>
+                                <constraint firstAttribute="width" constant="50" id="xte-5Z-sNP"/>
+                            </constraints>
+                            <state key="normal" image="close"/>
+                            <connections>
+                                <action selector="onBtnCloseClick:" destination="-1" eventType="touchUpInside" id="2Ng-pF-k5W"/>
+                            </connections>
+                        </button>
+                        <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="ird-cV-5hI">
+                            <constraints>
+                                <constraint firstAttribute="width" constant="37" id="Bwp-4i-Gfw"/>
+                                <constraint firstAttribute="height" constant="37" id="ILk-sO-NxV"/>
+                            </constraints>
+                        </imageView>
+                    </subviews>
+                    <constraints>
+                        <constraint firstItem="XpL-0q-sGB" firstAttribute="top" secondItem="DcB-EO-T6N" secondAttribute="top" id="08R-7N-sei"/>
+                        <constraint firstItem="02H-GB-l7x" firstAttribute="top" secondItem="DcB-EO-T6N" secondAttribute="top" constant="15" id="JqN-BG-sck"/>
+                        <constraint firstItem="XpL-0q-sGB" firstAttribute="leading" secondItem="DcB-EO-T6N" secondAttribute="leading" id="RQZ-SA-sgh"/>
+                        <constraint firstItem="ird-cV-5hI" firstAttribute="centerX" secondItem="DcB-EO-T6N" secondAttribute="centerX" id="kMn-PE-ArI"/>
+                        <constraint firstAttribute="trailing" secondItem="XpL-0q-sGB" secondAttribute="trailing" id="nrE-Uk-pj2"/>
+                        <constraint firstItem="ird-cV-5hI" firstAttribute="centerY" secondItem="DcB-EO-T6N" secondAttribute="centerY" constant="-50" id="pD6-7s-juA"/>
+                        <constraint firstAttribute="trailing" secondItem="02H-GB-l7x" secondAttribute="trailing" id="q7a-8i-PJV"/>
+                        <constraint firstAttribute="bottom" secondItem="XpL-0q-sGB" secondAttribute="bottom" id="waP-J3-t3K"/>
+                    </constraints>
+                </view>
+                <activityIndicatorView opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" animating="YES" style="whiteLarge" translatesAutoresizingMaskIntoConstraints="NO" id="peL-aY-lNZ">
+                    <color key="color" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                </activityIndicatorView>
+            </subviews>
+            <constraints>
+                <constraint firstAttribute="trailing" secondItem="yKZ-Px-8WM" secondAttribute="trailing" id="8wl-6e-K7k"/>
+                <constraint firstItem="peL-aY-lNZ" firstAttribute="centerY" secondItem="i5M-Pr-FkT" secondAttribute="centerY" constant="-50" id="BFc-Xq-msT"/>
+                <constraint firstAttribute="bottom" secondItem="yKZ-Px-8WM" secondAttribute="bottom" id="KcB-Jt-KzY"/>
+                <constraint firstItem="yKZ-Px-8WM" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" id="NWb-rD-loQ"/>
+                <constraint firstItem="DcB-EO-T6N" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" id="Tlm-Uc-OYq"/>
+                <constraint firstItem="DcB-EO-T6N" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" id="bxZ-JS-IhG"/>
+                <constraint firstItem="yKZ-Px-8WM" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" id="gvE-xK-O4g"/>
+                <constraint firstAttribute="trailing" secondItem="DcB-EO-T6N" secondAttribute="trailing" id="wj5-Zf-ve1"/>
+                <constraint firstAttribute="bottom" secondItem="DcB-EO-T6N" secondAttribute="bottom" id="yne-Jb-pEJ"/>
+                <constraint firstItem="peL-aY-lNZ" firstAttribute="centerX" secondItem="i5M-Pr-FkT" secondAttribute="centerX" id="zuf-N8-Zg7"/>
+            </constraints>
+            <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+        </view>
+    </objects>
+    <resources>
+        <image name="Loading_Screen.png" width="1080" height="1920"/>
+        <image name="close" width="16" height="16"/>
+    </resources>
+</document>

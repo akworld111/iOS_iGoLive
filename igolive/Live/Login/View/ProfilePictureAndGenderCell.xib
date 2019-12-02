@@ -1,0 +1,126 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="10117" systemVersion="15E65" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" id="KGk-i7-Jjw" customClass="ProfilePictureAndGenderCell">
+            <rect key="frame" x="0.0" y="0.0" width="375" height="67"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="KGk-i7-Jjw" id="H2p-sc-9uM">
+                <rect key="frame" x="0.0" y="0.0" width="375" height="66.5"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="X4z-rW-U7K">
+                        <rect key="frame" x="301" y="13" width="40" height="40"/>
+                        <constraints>
+                            <constraint firstAttribute="height" constant="40" id="6b9-10-ovI"/>
+                            <constraint firstAttribute="width" constant="40" id="O3H-Cm-lhz"/>
+                        </constraints>
+                    </imageView>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Profile Picture" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="avU-uG-40J">
+                        <rect key="frame" x="34" y="22" width="97" height="21"/>
+                        <constraints>
+                            <constraint firstAttribute="height" constant="21" id="ZU7-BL-k2K"/>
+                        </constraints>
+                        <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                        <color key="textColor" red="0.62745098039215685" green="0.62745098039215685" blue="0.62745098039215685" alpha="1" colorSpace="calibratedRGB"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Eyn-lH-grd">
+                        <rect key="frame" x="145" y="0.0" width="230" height="66"/>
+                        <subviews>
+                            <button opaque="NO" tag="1" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" reversesTitleShadowWhenHighlighted="YES" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="TME-ya-dNw">
+                                <rect key="frame" x="0.0" y="22" width="64" height="22"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="22" id="7hV-9a-6O9"/>
+                                    <constraint firstAttribute="width" constant="64" id="Ir4-R7-lzG"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <state key="normal" title="MALE" image="dotSelected">
+                                    <color key="titleColor" red="0.62745098040000002" green="0.62745098040000002" blue="0.62745098040000002" alpha="1" colorSpace="calibratedRGB"/>
+                                </state>
+                                <connections>
+                                    <action selector="chooseGneder:" destination="KGk-i7-Jjw" eventType="touchUpInside" id="lCN-kO-cQO"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" tag="2" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ZLv-Yc-vLy">
+                                <rect key="frame" x="164" y="22" width="84" height="22"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="84" id="1lU-Xv-4du"/>
+                                    <constraint firstAttribute="height" constant="22" id="aqy-3I-gxT"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <state key="normal" title="SECRET" image="dotSelected">
+                                    <color key="titleColor" red="0.62745098040000002" green="0.62745098040000002" blue="0.62745098040000002" alpha="1" colorSpace="calibratedRGB"/>
+                                </state>
+                                <connections>
+                                    <action selector="chooseGneder:" destination="KGk-i7-Jjw" eventType="touchUpInside" id="24k-Ml-7s0"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="J3p-y6-ZzJ">
+                                <rect key="frame" x="72" y="22" width="84" height="22"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="22" id="QaN-pd-7nb"/>
+                                    <constraint firstAttribute="width" constant="84" id="YVH-eQ-nW1"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <state key="normal" title="FEMALE" image="dotSelected">
+                                    <color key="titleColor" red="0.62745098040000002" green="0.62745098040000002" blue="0.62745098040000002" alpha="1" colorSpace="calibratedRGB"/>
+                                </state>
+                                <connections>
+                                    <action selector="chooseGneder:" destination="KGk-i7-Jjw" eventType="touchUpInside" id="Z6O-xg-JQw"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="TME-ya-dNw" firstAttribute="leading" secondItem="Eyn-lH-grd" secondAttribute="leading" id="4L4-IP-RYh"/>
+                            <constraint firstItem="J3p-y6-ZzJ" firstAttribute="leading" secondItem="TME-ya-dNw" secondAttribute="trailing" constant="6" id="Cg4-GH-sGg"/>
+                            <constraint firstItem="ZLv-Yc-vLy" firstAttribute="top" secondItem="Eyn-lH-grd" secondAttribute="top" constant="22" id="Dsg-m5-BC5"/>
+                            <constraint firstItem="ZLv-Yc-vLy" firstAttribute="leading" secondItem="J3p-y6-ZzJ" secondAttribute="trailing" constant="8" id="Qzn-SD-kat"/>
+                            <constraint firstAttribute="trailing" secondItem="J3p-y6-ZzJ" secondAttribute="trailing" constant="26" id="S1G-cH-grD"/>
+                            <constraint firstAttribute="trailing" secondItem="ZLv-Yc-vLy" secondAttribute="trailing" id="adb-66-b6g"/>
+                            <constraint firstItem="J3p-y6-ZzJ" firstAttribute="leading" secondItem="TME-ya-dNw" secondAttribute="trailing" constant="8" id="fM6-J7-Zoy"/>
+                            <constraint firstItem="TME-ya-dNw" firstAttribute="top" secondItem="Eyn-lH-grd" secondAttribute="top" constant="22" id="gLe-9l-CC2"/>
+                            <constraint firstItem="J3p-y6-ZzJ" firstAttribute="top" secondItem="Eyn-lH-grd" secondAttribute="top" constant="22" id="xWb-Iv-gy1"/>
+                        </constraints>
+                        <variation key="default">
+                            <mask key="constraints">
+                                <exclude reference="Cg4-GH-sGg"/>
+                                <exclude reference="S1G-cH-grD"/>
+                                <exclude reference="adb-66-b6g"/>
+                            </mask>
+                        </variation>
+                    </view>
+                </subviews>
+                <constraints>
+                    <constraint firstItem="avU-uG-40J" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leadingMargin" constant="26" id="3eM-7W-nW8"/>
+                    <constraint firstAttribute="trailingMargin" secondItem="Eyn-lH-grd" secondAttribute="trailing" constant="-8" id="Boo-gp-8Gy"/>
+                    <constraint firstItem="Eyn-lH-grd" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="topMargin" constant="-8" id="Gzg-fd-9sS"/>
+                    <constraint firstItem="avU-uG-40J" firstAttribute="centerY" secondItem="H2p-sc-9uM" secondAttribute="centerY" id="YlQ-kN-0x0"/>
+                    <constraint firstItem="Eyn-lH-grd" firstAttribute="leading" secondItem="avU-uG-40J" secondAttribute="trailing" constant="14" id="fwT-rY-dnS"/>
+                    <constraint firstAttribute="bottomMargin" secondItem="Eyn-lH-grd" secondAttribute="bottom" constant="-8" id="ihn-z5-HOW"/>
+                    <constraint firstAttribute="trailingMargin" secondItem="X4z-rW-U7K" secondAttribute="trailing" constant="26" id="lfz-lO-RJw"/>
+                    <constraint firstItem="X4z-rW-U7K" firstAttribute="centerY" secondItem="H2p-sc-9uM" secondAttribute="centerY" id="nK5-dc-zjz"/>
+                </constraints>
+            </tableViewCellContentView>
+            <connections>
+                <outlet property="femaleButton" destination="J3p-y6-ZzJ" id="dK3-wA-QOm"/>
+                <outlet property="genderView" destination="Eyn-lH-grd" id="Dse-pF-Mji"/>
+                <outlet property="headImageView" destination="X4z-rW-U7K" id="vsm-v8-2lT"/>
+                <outlet property="maleButton" destination="TME-ya-dNw" id="bba-P3-FJV"/>
+                <outlet property="secretButton" destination="ZLv-Yc-vLy" id="YhU-Cy-GIc"/>
+                <outlet property="titleLabel" destination="avU-uG-40J" id="mq3-NJ-sBc"/>
+            </connections>
+            <point key="canvasLocation" x="198.5" y="298.5"/>
+        </tableViewCell>
+    </objects>
+    <resources>
+        <image name="dotSelected" width="16" height="16"/>
+    </resources>
+</document>

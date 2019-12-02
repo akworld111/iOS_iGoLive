@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="11201" systemVersion="15G31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11161"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <tableViewCell contentMode="scaleToFill" selectionStyle="default" accessoryType="disclosureIndicator" indentationWidth="10" reuseIdentifier="PersonalCeterCell" rowHeight="80" id="KGk-i7-Jjw" customClass="PersonalCeterCell">
+            <rect key="frame" x="0.0" y="0.0" width="375" height="80"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="KGk-i7-Jjw" id="H2p-sc-9uM">
+                <frame key="frameInset" width="342" height="79"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Top_fans" translatesAutoresizingMaskIntoConstraints="NO" id="7DZ-6r-zD8"/>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="AIv-X5-PpN">
+                        <constraints>
+                            <constraint firstAttribute="width" constant="216" id="36b-vi-Uej"/>
+                        </constraints>
+                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                        <color key="textColor" red="0.25098039215686274" green="0.25098039215686274" blue="0.25098039215686274" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="head_light" translatesAutoresizingMaskIntoConstraints="NO" id="uWv-nB-yqm">
+                        <constraints>
+                            <constraint firstAttribute="width" constant="24" id="Nza-bB-6Sq"/>
+                            <constraint firstAttribute="height" constant="24" id="qrK-wB-CLu"/>
+                        </constraints>
+                    </imageView>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="EbX-KY-tvT">
+                        <frame key="frameInset" minX="292" minY="30" width="42" height="21"/>
+                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                        <color key="textColor" red="0.60784313725490191" green="0.60784313725490191" blue="0.60784313725490191" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" image="bronze_ellipse" translatesAutoresizingMaskIntoConstraints="NO" id="3JD-Af-PF8">
+                        <frame key="frameInset" minX="258" minY="34" width="26" height="13"/>
+                        <constraints>
+                            <constraint firstAttribute="width" constant="26" id="HhW-qI-Wd9"/>
+                            <constraint firstAttribute="height" constant="13" id="cp7-lx-44m"/>
+                        </constraints>
+                    </imageView>
+                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="pvW-af-fFB">
+                        <color key="backgroundColor" red="0.73725490196078436" green="0.73725490196078436" blue="0.73725490196078436" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstAttribute="height" constant="0.5" id="JYc-gP-YJo"/>
+                        </constraints>
+                    </view>
+                </subviews>
+                <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                <constraints>
+                    <constraint firstItem="3JD-Af-PF8" firstAttribute="centerY" secondItem="H2p-sc-9uM" secondAttribute="centerY" id="06a-Z8-yMc"/>
+                    <constraint firstItem="7DZ-6r-zD8" firstAttribute="centerY" secondItem="H2p-sc-9uM" secondAttribute="centerY" id="0xc-bR-tpo"/>
+                    <constraint firstItem="EbX-KY-tvT" firstAttribute="centerY" secondItem="H2p-sc-9uM" secondAttribute="centerY" id="EkZ-MK-MI0"/>
+                    <constraint firstItem="AIv-X5-PpN" firstAttribute="centerY" secondItem="H2p-sc-9uM" secondAttribute="centerY" id="FoQ-ri-D9r"/>
+                    <constraint firstItem="7DZ-6r-zD8" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leadingMargin" constant="10" id="QXA-17-CLw"/>
+                    <constraint firstAttribute="bottom" secondItem="pvW-af-fFB" secondAttribute="bottom" id="Qct-yE-EjY"/>
+                    <constraint firstItem="pvW-af-fFB" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" id="SDM-p5-NK9"/>
+                    <constraint firstItem="uWv-nB-yqm" firstAttribute="trailing" secondItem="H2p-sc-9uM" secondAttribute="trailingMargin" id="koe-en-HIB"/>
+                    <constraint firstItem="EbX-KY-tvT" firstAttribute="leading" secondItem="3JD-Af-PF8" secondAttribute="trailing" constant="8" id="lfl-OH-Nk7"/>
+                    <constraint firstItem="AIv-X5-PpN" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leadingMargin" constant="40" id="qrE-zh-OQZ"/>
+                    <constraint firstItem="uWv-nB-yqm" firstAttribute="centerY" secondItem="H2p-sc-9uM" secondAttribute="centerY" id="wIn-8w-cWO"/>
+                </constraints>
+            </tableViewCellContentView>
+            <constraints>
+                <constraint firstAttribute="trailing" secondItem="EbX-KY-tvT" secondAttribute="trailing" constant="41" id="42I-7m-Ggh"/>
+                <constraint firstAttribute="trailing" secondItem="pvW-af-fFB" secondAttribute="trailing" id="YwZ-B3-JFB"/>
+            </constraints>
+            <connections>
+                <outlet property="contentLabel" destination="AIv-X5-PpN" id="xNX-cz-PHr"/>
+                <outlet property="followerImage" destination="3JD-Af-PF8" id="PxE-Id-YzQ"/>
+                <outlet property="image" destination="7DZ-6r-zD8" id="flJ-7c-srY"/>
+                <outlet property="imageFansHead" destination="uWv-nB-yqm" id="28q-QG-FyK"/>
+                <outlet property="rightLabel" destination="EbX-KY-tvT" id="C1k-pZ-DfF"/>
+            </connections>
+            <point key="canvasLocation" x="284.5" y="256"/>
+        </tableViewCell>
+    </objects>
+    <resources>
+        <image name="Top_fans" width="19" height="15"/>
+        <image name="bronze_ellipse" width="26" height="13"/>
+        <image name="head_light" width="49" height="48"/>
+    </resources>
+</document>
